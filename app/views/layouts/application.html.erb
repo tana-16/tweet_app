@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tewwtapp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+
+        <%= link_to "TweetApp",root_path %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to "TweetAppとは",about_path %>
+        </li>
+        <li>
+          <%= link_to "一覧ページ",posts_path %>
+        </li>
+      </ul>
+    </header>
+    <%= yield %>
+  </body>
+</html>
